@@ -11,11 +11,14 @@ import java.util.List;
 @Entity
 @Data
 @NoArgsConstructor
-public class User {
+public class Cart {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String email;
-    private String password;
+    @OneToOne
+    private Profile profile;
+
+    @OneToMany
+    private List<CartProduct> productList;
 }
