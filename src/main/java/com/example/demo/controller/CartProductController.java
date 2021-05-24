@@ -14,7 +14,7 @@ import java.util.List;
 @RestController
 @JsonAutoDetect
 @RequestMapping("/api")
-//@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "http://localhost:3000")
 public class CartProductController {
     private final CartProductService cartProductService;
 
